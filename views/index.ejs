@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/index.css" type="text/css">
+    <script src="https://kit.fontawesome.com/44de1043d0.js" crossorigin="anonymous"></script>
+    <script src="/js/index.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="content">
+        <div class="search-bar">
+            <input type="text" class="search-bar-input" id placeholder="Search">
+            <button class="search-bar-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <%- //include('./pokemon.ejs') %>
+            <%
+            let cont= 0;
+            let url;
+            allPokemonList.forEach(function(pokemon){
+                cont++;
+                url = "http://localhost:3000/pokemon/" + cont;
+            %>
+            <div class="pokemon">
+                <a href= <%= url%>><img class="sprite" src= <%= pokemon %> alt="asd"></a>
+            </div>
+            <% });%>>
+    </div>
+</body>
+</html>

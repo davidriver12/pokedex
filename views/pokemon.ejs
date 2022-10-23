@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/pokemon.css" type="text/css">
+    <script src="/js/pokemon.js" defer></script>
+</head>
+<body>
+    <div class="searchbarCont">
+        <input class="searchbar" type="text" id="search" name="search" placeholder="Type Pokemon name or ID:" >
+        <button class="searchBtn">Go</button>
+    </div>
+
+    <div class="card">
+        <div class="div1" style= <% pokemonObject.color %>>
+            <img class="mainImg" src=<%=pokemonObject.sprites.other["official-artwork"].front_default%> alt="">
+        </div>
+        <div class="div2">
+            <h1 style="font-family: 'Teko', sans-serif" ><%= pokemonObject.name %></h1>
+            <p> TYPES </p>
+            <div class="typesDiv">
+                <img class="typeImg1" src=<%= pokemonObject.typeImg1 %>   alt="">
+                <img class="typeImg2" src=<%= pokemonObject.typeImg2 %>  alt="">
+                <p class="typeName1"><%= pokemonObject.types[0].type.name %></p>
+                <p class="typeName1"><%= pokemonObject.types[1].type.name %></p>
+            </div>
+            <div class="w-h">
+                <div class="weight">
+                    <p><%= pokemonObject.weight %> HG</p>
+                    <p class="gray">Weight</p>
+                </div>
+                <div class="height">
+                    <p><%= pokemonObject.height %> DM</p>
+                    <p class="gray">Height</p>
+                </div>
+            </div>
+            <p>MOVES</p>
+            <div class="movesDiv">
+                <p><%= pokemonObject.moves[0].move.name %></p>
+                <p><%= pokemonObject.moves[1].move.name %></p>
+                <p><%= pokemonObject.moves[2].move.name %></p>
+                <p><%= pokemonObject.moves[3].move.name %></p>
+            </div>
+            <p>ABILITIES</p>
+            <div class="abilitiesDiv">
+                <p><%= pokemonObject.abilities[0].ability.name %></p>
+                <p><%= pokemonObject.abilities[1].ability.name %></p>
+            </div>
+            <!--<li> MOVES </li> -->
+            <!--<li> ABILITES </li> -->
+        </div>
+        <div class="div3">
+            <p>STATS</p>
+            <div class="statsDiv">
+                <p>HP:</p>
+                <p class="hpP"><%= pokemonObject.stats[0].base_stat%> </p>
+                <div class="hpBar"></div>
+                <p>Speed:</p>
+                <p class="speedP"><%= pokemonObject.stats[5].base_stat %> </p>
+                <div class="speedBar"></div>
+                <p>Attack:</p>
+                <p class="attackP"><%= pokemonObject.stats[1].base_stat %> </p>
+                <div class="attackBar"></div>
+                <p>Defense:</p>
+                <p class="defenseP"><%= pokemonObject.stats[2].base_stat %> </p>
+                <div class="defenseBar"></div>
+                <p>Sp. Attack:</p>
+                <p class="spaP"><%= pokemonObject.stats[3].base_stat %> </p>
+                <div class="spaBar"></div>
+                <p>Sp. Defense:</p>
+                <p class="spdP"><%= pokemonObject.stats[4].base_stat %> </p>
+                <div class="spdBar"></div>
+                <p>Base experience</p>
+                <p class="expP"><%= pokemonObject.base_experience %></p>
+                <div class="expBar"></div>
+            </div>
+        </div>
+    </div>
+    <div class="buttonsDiv">
+        <button class="prevBtn">#<%= pokemonObject.id - 1%></button>
+        <button class="nextBtn">#<%= pokemonObject.id + 1%></button>
+    </div>
+    <p hidden class="currentID"><%= pokemonObject.id%></p>
+</body>
+</html>

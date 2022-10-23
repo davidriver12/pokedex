@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
+
+*{
+
+    margin: 0;
+
+}
+
+:root {
+    --bg-color-1: rgb(14, 14, 14);
+}
+
+body {
+
+    color: white;
+    background-color: black;
+    margin: 0;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 75vh;
+}
+
+.mainImg {
+    width: 25vw;
+}
+
+.typeImg1, .typeImg2 {
+    width: 3vw;
+}
+
+.div1, .div2, .div3 {
+    flex-shrink: 1;
+    padding: 1vw;
+    margin: 2vw;
+    height: 85%;
+    border-radius: 25px;
+}
+
+.div1{
+    --backg-color: attr(bg-color);
+    /*background-color: var(--backg-color, rgb(53, 53, 53));*/
+    background-color: var(--bg-color-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div2 {
+    background-color: var(--bg-color-1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+
+.div3 {
+    background-color: var(--bg-color-1)!important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+}
+
+.w-h {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.typesDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 2.5vw;
+}
+
+.statsDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    row-gap: 10px;
+}
+
+.typesDiv>* {
+    margin: auto;
+}
+
+.gray {
+    color: gray;
+}
+
+p{
+    margin: 1.2vh;
+}
+
+h1{
+    font-size: 35px;
+    margin: 1vh;
+}
+
+.hpBar, .speedBar, .attackBar, .defenseBar, .spaBar, .spdBar, .expBar {
+    --widthVar: (calc(var(--widthAttr)*1vw));
+    margin: auto;
+    height: 2vh;
+    border-radius: 20px;
+    background-color: rgb(233, 59, 82);
+}
+
+button {
+    color: white;
+    background-color: var(--bg-color-1);
+    width: 15vw;
+    height: 10vh;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.nextBtn {
+    border-radius: 20px 45% 45% 20px;
+}
+.prevBtn {
+    border-radius: 45% 20px 20px 45%;
+}
+
+.buttonsDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.movesDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2.5vw;
+}
+
+.abilitiesDiv {
+    display: flex;
+}
+
+.searchbar {
+    background-color: var(--bg-color-1);
+    border: none;
+    height: 4vh;
+    width: 30vw;
+    border-radius: 25px;
+}
+
+.searchbarCont {
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input, textarea {
+    color: white;
+}
+
+.searchBtn {
+    width: 8vh;
+    height: 4.8vh;
+    border-radius: 25px;
+}
+

@@ -1,0 +1,24 @@
+{
+  "name": "wd-midterm2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@mapbox/node-pre-gyp": "^1.0.10",
+    "colorthief": "^2.3.2",
+    "dominant-color": "^0.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "pure-color-thief-node": "^1.0.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

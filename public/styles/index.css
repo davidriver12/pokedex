@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
+
+body{
+    background-color: black;
+    font-family: 'Teko', sans-serif;
+}
+
+.container{
+    margin-top: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    gap: 15px;
+
+}
+
+.pokemon{
+
+    border-radius: 50px;
+    background-color: #0e0e0e;
+    width: max-content;
+}
+
+.sprite{
+    height: 250px;
+    width: 250px;
+}
+
+/*Color: #dc0a2d */
+
+.content{
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -10px;
+    background-color:#a82a3f;
+    padding: 2em;
+    box-shadow: 0 0 3em black;
+    width: auto;
+    position: relative;
+}
+
+.search-bar{
+    background-color: white;
+    justify-content: center;
+    display: flex;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    padding: 3px;
+    position: relative;
+    transition: width 400ms ease-in-out;
+    overflow: hidden;
+
+}
+.search-bar-input{
+    flex-grow: 1;
+    font-size: 1.5rem;
+    padding: 0 0.5em;
+    border: 0;
+    background:transparent;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    line-height: 47px;
+    opacity: 0;
+}
+
+.search-bar-input:focus{
+    outline: 0;
+}
+
+.search-bar-button{
+    color: black;
+    cursor: pointer;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+    transition: background-color 450ms ease-in-out;
+
+}
+
+.search-bar:focus-within{
+    width: 100%;
+}
+
+.search-bar:focus-within .search-bar-button {
+    background-color: black;
+    color: white;
+}
+
+.search-bar:focus-within .search-bar-input{
+    opacity: 1;
+}
